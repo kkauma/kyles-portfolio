@@ -34,6 +34,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
