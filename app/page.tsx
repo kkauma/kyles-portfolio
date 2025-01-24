@@ -35,9 +35,17 @@ export default function Page() {
             <span>Scottsdale, AZ</span>
           </div>
           <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-            {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-            Vim's keystroke commands and tabs' flexibility for personal viewing
-            preferences.`}
+            👋 Hi, I'm Kyle. I'm an aspiring software engineer and entrepreneur,
+            constantly learning and building. I most recently spent 3 years at{" "}
+            <a
+              href="https://vercel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-800 dark:text-neutral-200 underline"
+            >
+              Vercel
+            </a>
+            , working on the Strategic Finance team.
           </p>
           <CopyEmail />
         </div>
