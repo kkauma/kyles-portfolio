@@ -12,7 +12,7 @@ const projects: Project[] = [
   {
     title: "Campfinder",
     description: "A website for finding campsites all over the world.",
-    image: "/camp.jpg",
+    image: "/campsite.jpg",
     code: "https://github.com/kkauma/campfinder",
     demo: "https://campfinder-bd1w.onrender.com/",
   },

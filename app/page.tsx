@@ -47,6 +47,9 @@ export default function Page() {
             </a>
             , working on the Strategic Finance team.
           </p>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+            Check out my travel blog for all of our adventures!
+          </p>
           <CopyEmail />
         </div>
       </div>
