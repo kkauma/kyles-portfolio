@@ -41,7 +41,7 @@ export default function Page() {
               href="https://vercel.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-800 dark:text-neutral-200 underline"
+              className="text-neutral-800 dark:text-neutral-200 underline hover:no-underline hover:text-neutral-600 dark:hover:text-neutral-400"
             >
               Vercel
             </a>
