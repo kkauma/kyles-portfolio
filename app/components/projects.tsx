@@ -23,6 +23,13 @@ const projects: Project[] = [
     code: "https://github.com/kkauma/movie_comparison",
     demo: "https://moviefight.app",
   },
+  {
+    title: "Bookshelf",
+    description: "A simple app highlighting some of my favorite books.",
+    image: "/bookshelf.jpg",
+    code: "https://github.com/kkauma/bookshelf",
+    demo: "https://modernbookshelf.io",
+  },
   // Add more projects here
 ];
 
