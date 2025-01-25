@@ -1,26 +1,46 @@
+import Image from "next/image";
+
 type Project = {
   title: string;
   description: string;
+  image: string;
   github?: string;
   demo?: string;
 };
 
 const projects: Project[] = [
   {
-    title: "Portfolio Blog",
-    description: "A minimalist portfolio and blog built with Next.js and MDX.",
-    github: "https://github.com/yourusername/portfolio-blog",
-    demo: "https://your-portfolio.com",
+    title: "Campfinder",
+    description: "A website for finding campsites all over the world.",
+    image: "/camp.jpg",
+    github: "https://github.com/kkauma/campfinder",
+    demo: "https://campfinder-bd1w.onrender.com/",
+  },
+  {
+    title: "Movie Fight",
+    description: "A website for comparing movies.",
+    image: "/movie.jpg",
+    github: "https://github.com/kkauma/movie_comparison",
+    demo: "https://moviefight.app",
   },
   // Add more projects here
 ];
 
 export function Projects() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-12">
       {projects.map((project, index) => (
-        <div key={index} className="flex flex-col gap-2">
-          <h3 className="font-medium">{project.title}</h3>
+        <div key={index} className="flex flex-col gap-4">
+          <h3 className="font-medium text-xl">{project.title}</h3>
+          <div className="relative w-[300px] h-[200px]">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              priority={index === 0}
+            />
+          </div>
           <p className="text-neutral-600 dark:text-neutral-400">
             {project.description}
           </p>
