@@ -4,7 +4,7 @@ type Project = {
   title: string;
   description: string;
   image: string;
-  github?: string;
+  code?: string;
   demo?: string;
 };
 
@@ -20,14 +20,14 @@ const projects: Project[] = [
     title: "Movie Fight",
     description: "A website for comparing movies.",
     image: "/movie.jpg",
-    github: "https://github.com/kkauma/movie_comparison",
+    code: "https://github.com/kkauma/movie_comparison",
     demo: "https://moviefight.app",
   },
   {
     title: "Bookshelf",
     description: "A simple app highlighting some of my favorite books.",
     image: "/bookshelf.jpg",
-    github: "https://github.com/kkauma/bookshelf",
+    code: "https://github.com/kkauma/bookshelf",
     demo: "https://modernbookshelf.io",
   },
   // Add more projects here
@@ -59,9 +59,9 @@ export function Projects() {
             </p>
 
             <div className="flex gap-4">
-              {project.github && (
+              {project.code && (
                 <a
-                  href={project.github}
+                  href={project.code}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200"
