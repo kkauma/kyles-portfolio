@@ -38,7 +38,7 @@ export default function Page() {
             👋 Hi, I'm Kyle. I'm an aspiring software engineer and entrepreneur,
             constantly learning and building. I most recently spent 3 years at{" "}
             <a
-              href="https://vercel.com"
+              href="https://vercel.com/home"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-800 dark:text-neutral-200 underline hover:no-underline hover:text-neutral-600 dark:hover:text-neutral-400"
