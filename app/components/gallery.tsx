@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import ImageModal from "./ImageModal";
 
 interface CloudinaryImage {
   public_id: string;
@@ -19,6 +20,7 @@ export default function Gallery() {
   const [images, setImages] = useState<CloudinaryImage[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -43,23 +45,31 @@ export default function Gallery() {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {images.map((image) => (
-        <div key={image.public_id} className="relative aspect-square">
-          <Image
-            src={image.secure_url}
-            alt={image.public_id}
-            fill
-            className="object-cover rounded-lg"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            placeholder="blur"
-            blurDataURL={`${image.secure_url.replace(
-              "/upload/",
-              "/upload/w_10,e_blur:100/"
-            )}`}
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {images.map((image) => (
+          <div
+            key={image.public_id}
+            className="relative aspect-square cursor-pointer"
+            onClick={() => setSelectedImage(image.secure_url)}
+          >
+            <Image
+              src={image.secure_url}
+              alt="Gallery image"
+              fill
+              className="object-cover hover:opacity-90 transition-opacity"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        ))}
+      </div>
+
+      {selectedImage && (
+        <ImageModal
+          imageUrl={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
+    </>
   );
 }
