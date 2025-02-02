@@ -1,0 +1,166 @@
+---
+title: "SSG vs. SSR vs. CSR: Choosing the Right Rendering Strategy"
+publishedAt: "2025-02-02"
+summary: "A deep dive into Static Site Generation (SSG), Server-Side Rendering (SSR), and Client-Side Rendering (CSR), including when to use each and their performance trade-offs."
+---
+
+Building a web application involves making a crucial decision: **How should your pages be rendered?** The choice between **Static Site Generation (SSG), Server-Side Rendering (SSR), and Client-Side Rendering (CSR)** can significantly impact **performance, SEO, and user experience**.
+
+In this guide, we’ll break down **SSG, SSR, and CSR**, explaining how each works, their pros and cons, and when to use them.
+
+---
+
+## What is Rendering?
+
+Rendering is how a webpage **turns raw code (HTML, CSS, JavaScript) into a fully displayed webpage** for users. Different rendering strategies determine **where** and **when** this transformation happens.
+
+The three main rendering strategies are:
+
+- **SSG (Static Site Generation)** – Pre-generates pages at **build time**.
+- **SSR (Server-Side Rendering)** – Renders pages **on the server** for each request.
+- **CSR (Client-Side Rendering)** – Loads a minimal page, then uses JavaScript to fetch and render content **on the client**.
+
+Each approach has its trade-offs in terms of **speed, SEO, and interactivity**.
+
+---
+
+## Static Site Generation (SSG)
+
+### How It Works
+
+With **SSG**, pages are generated **at build time** and served as static HTML files. When a user visits the site, the content is instantly available.
+
+1. At build time, the system pre-renders all pages.
+2. The static files are uploaded to a Content Delivery Network (CDN).
+3. Users get a **fully-rendered page instantly** from the nearest CDN.
+
+### Performance Impact
+
+- **Blazing fast load times** (because files are served from a CDN).
+- **Best for SEO** (fully rendered pages are available immediately).
+- **Scales efficiently** (no database or backend calls per request).
+- **Not ideal for real-time updates** (requires rebuilding for content changes).
+
+### When to Use SSG
+
+- **Marketing websites, blogs, and documentation**.
+- **E-commerce product pages** that don’t update frequently.
+- **Portfolio websites** with pre-defined content.
+
+### Example Use Case
+
+A **personal blog** is a great use case for SSG. Blog posts don’t change frequently, so pre-rendering them at build time ensures fast loading and great SEO.
+
+---
+
+## Server-Side Rendering (SSR)
+
+### How It Works
+
+With **SSR**, pages are generated **on-demand, at request time**.
+
+1. A user requests a page.
+2. The server **fetches data** and renders the page.
+3. The complete HTML page is sent to the browser.
+
+### Performance Impact
+
+- **Fresh, up-to-date content on every request**.
+- **Better for dynamic pages** than SSG (no need to rebuild).
+- **Good for SEO** (search engines get fully-rendered pages).
+- **Slower initial load** (server must process every request).
+- **Higher server costs** (requires backend processing per visit).
+
+### When to Use SSR
+
+- **Dynamic dashboards** with user-specific content.
+- **E-commerce sites with real-time stock updates**.
+- **News websites where articles change frequently**.
+
+### Example Use Case
+
+An **e-commerce product page** that needs to display real-time inventory and pricing is an ideal use case for SSR.
+
+---
+
+## Client-Side Rendering (CSR)
+
+### How It Works
+
+With **CSR**, the **initial HTML is minimal**, and JavaScript loads the content dynamically in the browser.
+
+1. The user visits the page.
+2. The page loads a **basic shell** with no content.
+3. JavaScript fetches and renders data **after the page loads**.
+
+### Performance Impact
+
+- **Faster initial response** (lighter server load).
+- **Better for highly interactive applications**.
+- **Reduces server-side processing cost**.
+- **Slower for SEO** (content loads asynchronously).
+- **Poorer experience for slow network users** (requires JavaScript execution).
+
+### When to Use CSR
+
+- **Single Page Applications (SPAs) like React and Vue apps**.
+- **User dashboards** that rely on frequent client-side updates.
+- **Chat applications and real-time collaboration tools**.
+
+### Example Use Case
+
+A **real-time chat application** benefits from CSR since content is constantly changing and doesn’t need to be pre-rendered.
+
+---
+
+## Comparing SSG, SSR, and CSR
+
+| Feature             | **SSG (Static Site Generation)** | **SSR (Server-Side Rendering)**           | **CSR (Client-Side Rendering)**     |
+| ------------------- | -------------------------------- | ----------------------------------------- | ----------------------------------- |
+| **Speed**           | 🚀 Extremely fast (CDN-cached)   | 🏎️ Slower (server processes each request) | 🚀 Fast after initial load          |
+| **SEO**             | ✅ Best (pre-rendered content)   | ✅ Good (content rendered on request)     | ❌ Challenging (requires hydration) |
+| **User Experience** | ✅ Instant load times            | ⚠️ Can be slow on first load              | ✅ Best for interactive apps        |
+| **Data Freshness**  | ❌ Requires rebuilds for updates | ✅ Always fresh                           | ✅ Real-time updates                |
+| **Server Load**     | ✅ Low (static files)            | ❌ High (processing per request)          | ✅ Low (client handles rendering)   |
+
+---
+
+## How Rendering Choices Impact Performance
+
+- **SSG is the fastest** because files are served from a CDN with no additional processing.
+- **SSR adds processing time** since the server generates pages on demand.
+- **CSR delays content display** as JavaScript needs to fetch and render it dynamically.
+
+For best performance, many modern frameworks use **a hybrid approach**—combining SSG, SSR, and CSR where appropriate.
+
+---
+
+## Choosing the Right Rendering Strategy
+
+| **Use Case**                                   | **Best Rendering Method** |
+| ---------------------------------------------- | ------------------------- |
+| Personal blogs, marketing pages                | **SSG**                   |
+| Real-time dashboards                           | **CSR**                   |
+| E-commerce product pages with frequent updates | **SSR**                   |
+| Static documentation websites                  | **SSG**                   |
+| Social media apps                              | **CSR**                   |
+| News websites                                  | **SSR**                   |
+
+---
+
+## Additional Resources
+
+- [Next.js Documentation](https://nextjs.org/docs/basic-features/pages)
+- [Google Web Fundamentals](https://web.dev/)
+- [MDN: Server-Side Rendering vs. Client-Side Rendering](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [How Content Delivery Networks Work](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
+
+---
+
+## Final Thoughts
+
+Understanding **SSG, SSR, and CSR** is crucial for optimizing web performance, SEO, and user experience. There is no **one-size-fits-all** solution—choosing the right rendering strategy depends on your use case.
+
+- **SSG is best for fast, static content**.
+- **SSR is great for real-time updates with SEO**.
+- \*\*CSR
