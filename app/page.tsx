@@ -50,10 +50,6 @@ export default function Page() {
           <CopyEmail />
         </div>
       </div>
-
-      <div className="my-8">
-        <BlogPosts />
-      </div>
     </section>
   );
 }
