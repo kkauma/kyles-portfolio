@@ -35,8 +35,8 @@ export default function Page() {
             <span>Scottsdale, AZ</span>
           </div>
           <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-            👋 Hi, I'm Kyle. I'm an aspiring software engineer and entrepreneur,
-            constantly learning and building. I most recently spent 3 years at{" "}
+            👋 Hi, I'm Kyle. I'm a software engineer, constantly learning new
+            technologies and building apps. I most recently spent 3 years at{" "}
             <a
               href="https://vercel.com/home"
               target="_blank"
@@ -45,7 +45,7 @@ export default function Page() {
             >
               Vercel
             </a>
-            , working on the Strategic Finance team.
+            , working on the strategic finance team.
           </p>
           <CopyEmail />
         </div>
