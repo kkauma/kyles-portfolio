@@ -8,7 +8,7 @@ export default function Page() {
       <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
         <Image
           alt="Kyle Kauma"
-          src="/kyle.jpeg" // Make sure to add your photo to the public directory
+          src="/kyle.jpeg"
           width={200}
           height={200}
           priority
