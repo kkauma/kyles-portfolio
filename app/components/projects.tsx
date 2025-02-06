@@ -30,6 +30,13 @@ const projects: Project[] = [
     code: "https://github.com/kkauma/bookshelf",
     demo: "https://modernbookshelf.io",
   },
+  {
+    title: "Maze Game",
+    description: "A game where a user navigates through a maze.",
+    image: "/bookshelf.jpg",
+    code: "https://github.com/kkauma/maze-game",
+    demo: "https://modernbookshelf.io",
+  },
   // Add more projects here
 ];
 
