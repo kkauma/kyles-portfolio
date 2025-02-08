@@ -35,7 +35,7 @@ const projects: Project[] = [
     description: "A game where a user navigates through a maze.",
     image: "/maze.jpg",
     code: "https://github.com/kkauma/maze-game",
-    demo: "https://modernbookshelf.io",
+    demo: "https://maze-game-nu.vercel.app/",
   },
   // Add more projects here
 ];
