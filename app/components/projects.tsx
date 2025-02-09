@@ -11,14 +11,14 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Campfinder",
-    description: "A website for finding campsites all over the world.",
+    description: "Find campsites all over the world.",
     image: "/campsite.jpg",
     code: "https://github.com/kkauma/campfinder",
     demo: "https://campfinder-bd1w.onrender.com/",
   },
   {
     title: "Movie Fight",
-    description: "A website for comparing movies.",
+    description: "Compare movies with ease.",
     image: "/movie.jpg",
     code: "https://github.com/kkauma/movie_comparison",
     demo: "https://moviefight.app",
@@ -32,7 +32,7 @@ const projects: Project[] = [
   },
   {
     title: "Maze Game",
-    description: "A game where a user navigates through a maze.",
+    description: "Navigate through the maze to win.",
     image: "/maze.jpg",
     code: "https://github.com/kkauma/maze-game",
     demo: "https://maze-game-nu.vercel.app/",
