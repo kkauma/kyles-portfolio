@@ -37,6 +37,13 @@ const projects: Project[] = [
     code: "https://github.com/kkauma/maze-game",
     demo: "https://maze-game-nu.vercel.app/",
   },
+  {
+    title: "Pomodoro Timer",
+    description: "Set a timer and focus on your work.",
+    image: "/clock.jpg",
+    code: "https://github.com/kkauma/maze-game",
+    demo: "https://maze-game-nu.vercel.app/",
+  },
   // Add more projects here
 ];
 
