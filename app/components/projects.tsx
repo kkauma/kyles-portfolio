@@ -24,6 +24,13 @@ const projects: Project[] = [
     demo: "https://moviefight.app",
   },
   {
+    title: "Lume Studios",
+    description: "Generate marketing content using AI.",
+    image: "/content.jpg",
+    code: "https://github.com/kkauma/lume-studios",
+    demo: "https://lume-studios.vercel.app/",
+  },
+  {
     title: "Bookshelf",
     description: "A simple app highlighting some of my favorite books.",
     image: "/bookshelf.jpg",
