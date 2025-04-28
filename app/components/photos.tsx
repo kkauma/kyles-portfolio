@@ -16,7 +16,7 @@ function getOptimizedUrl(url: string, width: number): string {
   return url.replace("/upload/", `/upload/w_${width},c_scale,f_auto,q_auto/`);
 }
 
-export default function Gallery() {
+export default function Photos() {
   const [images, setImages] = useState<CloudinaryImage[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
